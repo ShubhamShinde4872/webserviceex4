@@ -43,7 +43,7 @@ public class HomeController {
 	  public String regData(@RequestBody Student s)
 	  {
 		  hs.saveData(s);
-		  return "Register data succesfully";
+		  return "Register data succesfully in database";
 	  }
 	
 	//put method use for update data using id
@@ -52,14 +52,14 @@ public class HomeController {
 	{
 		s.setId(id);
 		hs.saveData(s);
-		return "Update data Succesfully";
+		return "Update data Succesfully in database";
 	}
 	
 	@DeleteMapping("/deleteData/{id}")
 	public String deleteData(@PathVariable("id") int id)
 	{
 		hs.deleteIDData(id);
-		return "Delete data succesfully";
+		return "Delete data succesfully in database";
 	}
 	
 	
